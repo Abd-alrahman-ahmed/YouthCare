@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "645119612668",
+    "firebase_url": "https://youth-care-f6deb.firebaseio.com",
+    "project_id": "youth-care-f6deb",
+    "storage_bucket": "youth-care-f6deb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:645119612668:android:454fe15b80fc4b27942979",
+        "android_client_info": {
+          "package_name": "com.youthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "645119612668-gls1s2as4mh9lfs8i05adevboku83n3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.youthcare",
+            "certificate_hash": "1bd1f62f116f45354d6c229aace102136565d7ea"
+          }
+        },
+        {
+          "client_id": "645119612668-10hv4g8ff8j42cfr7fhi5otm8n36ttim.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsqPx2bB0uVITiGf7yIjpPFpNy-bw6TFo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "645119612668-10hv4g8ff8j42cfr7fhi5otm8n36ttim.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
