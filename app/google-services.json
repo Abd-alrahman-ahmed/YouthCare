@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "453301843700",
+    "firebase_url": "https://youth-care.firebaseio.com",
+    "project_id": "youth-care",
+    "storage_bucket": "youth-care.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453301843700:android:c022d6424788e5f1d950a1",
+        "android_client_info": {
+          "package_name": "com.youthcare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453301843700-ntmmf5honqoas7km0tkkr53jf7g6jt4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.youthcare",
+            "certificate_hash": "5277f3d9a111389d4d293655f783e2adea7dfdba"
+          }
+        },
+        {
+          "client_id": "453301843700-a94impke3j8jfdrhcjfmqodhqsh1685p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDD4KI-mgPETutiDrsvxKcAX6acR80XkFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453301843700-a94impke3j8jfdrhcjfmqodhqsh1685p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
