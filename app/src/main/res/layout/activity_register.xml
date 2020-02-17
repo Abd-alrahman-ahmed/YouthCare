@@ -6,19 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".Activities.RegisterActivity"
     tools:layout_editor_absoluteY="81dp">
+
     <include
         android:id="@+id/main_app_bar"
-        layout="@layout/app_bar_layout" />
+        layout="@layout/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="@+id/main_app_bar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/UserPhoto"
@@ -34,7 +37,9 @@
                 android:id="@+id/registerEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
                 android:autofillHints=""
                 android:background="@drawable/reg_edit_text"
                 android:ems="10"
@@ -56,8 +61,8 @@
                 android:hint="@string/user_name"
                 android:inputType="textPersonName"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/registerEmail"
+                app:layout_constraintStart_toStartOf="@+id/registerEmail"
                 app:layout_constraintTop_toBottomOf="@+id/registerEmail" />
 
             <EditText
@@ -71,8 +76,8 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/registerEmail"
+                app:layout_constraintStart_toStartOf="@+id/registerEmail"
                 app:layout_constraintTop_toBottomOf="@+id/userName" />
 
             <EditText
@@ -86,8 +91,8 @@
                 android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/password"
+                app:layout_constraintStart_toStartOf="@+id/password"
                 app:layout_constraintTop_toBottomOf="@+id/password" />
 
             <Button
