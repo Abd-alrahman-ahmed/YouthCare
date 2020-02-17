@@ -1,8 +1,6 @@
-package models;
+package com.youthcare.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
-
-import java.util.List;
 
 @IgnoreExtraProperties
 public class User {
@@ -12,7 +10,7 @@ public class User {
     private String gender;
     private Role userRole;
 
-    public User(){
+    public User() {
 
     }
 
@@ -24,43 +22,43 @@ public class User {
         this.userRole = userRole;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setFaculty(String faculty) {
-        this.faculty = faculty;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public void setUserRole(Role userRole) {
-        this.userRole = userRole;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPhone() {
         return phone;
     }
 
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
     public String getFaculty() {
         return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
     }
 
     public String getGender() {
         return gender;
     }
 
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
     public Role getUserRole() {
         return userRole;
+    }
+
+    public void setUserRole(Role userRole) {
+        this.userRole = userRole;
     }
 }

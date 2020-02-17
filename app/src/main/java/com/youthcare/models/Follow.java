@@ -1,4 +1,4 @@
-package models;
+package com.youthcare.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
@@ -19,12 +19,12 @@ public class Follow {
         return userId;
     }
 
-    public String getDepartmentId() {
-        return departmentId;
-    }
-
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getDepartmentId() {
+        return departmentId;
     }
 
     public void setDepartmentId(String departmentId) {

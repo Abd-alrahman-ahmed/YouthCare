@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.youthcare.R;
 
@@ -14,11 +15,17 @@ public class StartActivity extends AppCompatActivity {
 
     private Button registerBtn;
     private Button loginBtn;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        //toolbar
+        mToolbar=(androidx.appcompat.widget.Toolbar) findViewById(R.id.main_app_bar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle(R.string.app_name);
 
         //buttons
         registerBtn = findViewById(R.id.registerBtn);

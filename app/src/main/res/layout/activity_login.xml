@@ -4,15 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     tools:context=".Activities.LoginActivity">
+
+    <include
+        android:id="@+id/main_app_bar"
+        layout="@layout/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
         android:id="@+id/loginPhoto"
         android:layout_width="90dp"
         android:layout_height="90dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="132dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,7 +29,9 @@
         android:id="@+id/loginmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/reg_edit_text"
         android:ems="10"
         android:hint="@string/email"

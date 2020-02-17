@@ -17,6 +17,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -42,12 +43,17 @@ public class RegisterActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private Button regBtn;
     private FirebaseAuth mAuth;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        //toolbar
+        mToolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.main_app_bar);
+        setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle(getString(R.string.create_account));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         //image

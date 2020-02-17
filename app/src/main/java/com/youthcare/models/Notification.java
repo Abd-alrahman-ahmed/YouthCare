@@ -1,4 +1,5 @@
-package models;
+package com.youthcare.models;
+
 import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
@@ -16,27 +17,27 @@ public class Notification {
         this.departmentId = departmentId;
     }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public void setDepartmentId(String departmentId) {
-        this.departmentId = departmentId;
-    }
-
     public String getContent() {
         return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getDate() {
         return date;
     }
 
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public String getDepartmentId() {
         return departmentId;
+    }
+
+    public void setDepartmentId(String departmentId) {
+        this.departmentId = departmentId;
     }
 }

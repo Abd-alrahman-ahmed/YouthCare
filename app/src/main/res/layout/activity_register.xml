@@ -6,6 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".Activities.RegisterActivity"
     tools:layout_editor_absoluteY="81dp">
+    <include
+        android:id="@+id/main_app_bar"
+        layout="@layout/app_bar_layout" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -21,7 +24,7 @@
                 android:id="@+id/UserPhoto"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="90dp"
+                android:layout_marginTop="142dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

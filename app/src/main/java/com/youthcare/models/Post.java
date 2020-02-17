@@ -1,4 +1,5 @@
-package models;
+package com.youthcare.models;
+
 import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
@@ -18,35 +19,35 @@ public class Post {
         this.form = form;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public void setForm(Form form) {
-        this.form = form;
-    }
-
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getContent() {
         return content;
     }
 
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     public String getImageUrl() {
         return imageUrl;
     }
 
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
     public Form getForm() {
         return form;
+    }
+
+    public void setForm(Form form) {
+        this.form = form;
     }
 }

@@ -1,4 +1,5 @@
-package models;
+package com.youthcare.models;
+
 import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties

@@ -1,7 +1,8 @@
-package models;
+package com.youthcare.models;
+
+import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.List;
-import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
 public class department {
@@ -10,7 +11,8 @@ public class department {
     private User headUser;
     private List<Post> posts;
 
-    public department() {}
+    public department() {
+    }
 
     public department(String name, String about, User headUser, List<Post> departmentPosts) {
         this.name = name;
@@ -19,35 +21,35 @@ public class department {
         this.posts = departmentPosts;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setAbout(String about) {
-        this.about = about;
-    }
-
-    public void setHeadUser(User headUser) {
-        this.headUser = headUser;
-    }
-
-    public void setPosts(List<Post> departmentPosts) {
-        this.posts = departmentPosts;
-    }
-
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAbout() {
         return about;
     }
 
+    public void setAbout(String about) {
+        this.about = about;
+    }
+
     public User getHeadUser() {
         return headUser;
     }
 
+    public void setHeadUser(User headUser) {
+        this.headUser = headUser;
+    }
+
     public List<Post> getPosts() {
         return posts;
+    }
+
+    public void setPosts(List<Post> departmentPosts) {
+        this.posts = departmentPosts;
     }
 }

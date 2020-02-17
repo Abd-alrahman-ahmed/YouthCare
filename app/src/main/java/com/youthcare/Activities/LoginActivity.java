@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,12 +25,18 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private Button loginBtn;
     private FirebaseAuth mAuth;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportActionBar().setTitle(R.string.login);
+        //toolbar
+        mToolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.main_app_bar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Login");
+
 
 
         email = findViewById(R.id.loginmail);
