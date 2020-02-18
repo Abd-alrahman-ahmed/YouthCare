@@ -75,5 +75,5 @@
         app:layout_constraintEnd_toStartOf="@+id/container"
         app:layout_constraintStart_toStartOf="@+id/container"
         app:layout_constraintTop_toTopOf="@+id/container"
-        app:srcCompat="@mipmap/icon48" />
+        app:srcCompat="@mipmap/icon" />
 </androidx.constraintlayout.ConstraintLayout>
