@@ -10,8 +10,10 @@
     <string name="user_name">User Name</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="log_out">Log Out</string>
-    <string name="account_setting">Account Setting</string>
-    <string name="all_users">All Users</string>
+    <string name="news">News</string>
+    <string name="notifications">Notifications</string>
+    <string name="sections">Sections</string>
+    <string name="about_us">About Us</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
