@@ -13,6 +13,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
@@ -25,7 +26,9 @@ import com.youthcare.Adapters.NewsAdapter;
 import com.youthcare.Fragments.NewsFragment;
 import com.youthcare.Fragments.NotificationFragment;
 import com.youthcare.R;
+import com.youthcare.models.Post;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,31 +38,33 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        try {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-        // initialize Tab menus
-        toolbar = (Toolbar) findViewById(R.id.main_tool_bar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            // initialize Tab menus
+            toolbar = (Toolbar) findViewById(R.id.main_tool_bar);
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        viewPager = (ViewPager) findViewById(R.id.app_pager);
-        FragmentPageAdapter pageAdapter = new FragmentPageAdapter(getSupportFragmentManager());
-        pageAdapter.addFragment(new NewsFragment(), "News");
-        pageAdapter.addFragment(new NotificationFragment(), "Notifications");
-        pageAdapter.addFragment(new NewsFragment(), "Activities");
-        pageAdapter.addFragment(new NotificationFragment(), "About Us");
-        viewPager.setAdapter(pageAdapter);
+            viewPager = (ViewPager) findViewById(R.id.app_pager);
+            FragmentPageAdapter pageAdapter = new FragmentPageAdapter(getSupportFragmentManager());
+            pageAdapter.addFragment(new NewsFragment(), "News");
+            pageAdapter.addFragment(new NotificationFragment(), "Notifications");
+            pageAdapter.addFragment(new NewsFragment(), "Activities");
+            pageAdapter.addFragment(new NotificationFragment(), "About Us");
+            viewPager.setAdapter(pageAdapter);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+            tabLayout = (TabLayout) findViewById(R.id.tabs);
+            tabLayout.setupWithViewPager(viewPager);
 
-        // Initialize FireBase Auth
-        mAuth = FirebaseAuth.getInstance();
+            // Initialize FireBase Auth
+            mAuth = FirebaseAuth.getInstance();
+        }catch (Exception e){
+            System.out.println("hello " + e);
+        }
     }
 
     @Override
