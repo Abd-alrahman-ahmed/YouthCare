@@ -23,9 +23,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         //toolbar
-        mToolbar=(androidx.appcompat.widget.Toolbar) findViewById(R.id.main_app_bar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle(R.string.app_name);
+        mToolbar = (Toolbar) findViewById(R.id.main_tool_bar);
 
         //buttons
         registerBtn = findViewById(R.id.registerBtn);

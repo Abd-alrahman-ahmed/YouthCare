@@ -51,11 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //toolbar
-        mToolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.main_app_bar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle(R.string.create_account);
-
+        mToolbar = (Toolbar) findViewById(R.id.main_tool_bar);
 
         //image
         pickedImageUri = DEFAULT_IMAGE_URI;

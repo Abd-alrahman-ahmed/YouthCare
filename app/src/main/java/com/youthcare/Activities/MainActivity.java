@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,14 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private TabLayout tabLayout;
     private ViewPager viewPager;
-    RecyclerView NewsRecyclerview;
-    NewsAdapter newsAdapter;
-    List<NewsItem> mData;
-    FloatingActionButton fabSwitcher;
-    boolean isDark = false;
-    ConstraintLayout rootLayout;
-    EditText searchInput;
-    CharSequence search = "";
 
 
 

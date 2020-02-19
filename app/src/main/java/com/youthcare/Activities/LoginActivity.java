@@ -32,12 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //toolbar
-        mToolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.main_app_bar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Login");
-
-
+        mToolbar = (Toolbar) findViewById(R.id.main_tool_bar);
 
         email = findViewById(R.id.loginmail);
         password = findViewById(R.id.loginPaassword);
