@@ -3,6 +3,7 @@ package com.youthcare.Activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,8 +22,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.youthcare.Adapters.ActivitiesAdapter;
 import com.youthcare.Adapters.FragmentPageAdapter;
 import com.youthcare.Adapters.NewsAdapter;
+import com.youthcare.Fragments.ActivitiesFragment;
 import com.youthcare.Fragments.NewsFragment;
 import com.youthcare.Fragments.NotificationFragment;
 import com.youthcare.R;
@@ -30,6 +33,8 @@ import com.youthcare.models.Post;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             FragmentPageAdapter pageAdapter = new FragmentPageAdapter(getSupportFragmentManager());
             pageAdapter.addFragment(new NewsFragment(), "News");
             pageAdapter.addFragment(new NotificationFragment(), "Notifications");
-            pageAdapter.addFragment(new NewsFragment(), "Activities");
+            pageAdapter.addFragment(new ActivitiesFragment(), "Activities");
             pageAdapter.addFragment(new NotificationFragment(), "About Us");
             viewPager.setAdapter(pageAdapter);
 
