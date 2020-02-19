@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.youthcare.Fragments.ActivitiesFragment;
 import com.youthcare.R;
 
 import java.util.ArrayList;
@@ -22,9 +23,9 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
     private static final String TAG = "ActivitiesAdapter";
     private ArrayList<String>mImageNames=new ArrayList<>();
     private ArrayList<String>mImages=new ArrayList<>();
-    private Context mContext;
+    private ActivitiesFragment mContext;
 
-    public ActivitiesAdapter(ArrayList<String> mImageNames, ArrayList<String> mImages, Context mContext) {
+    public ActivitiesAdapter(ArrayList<String> mImageNames, ArrayList<String> mImages, ActivitiesFragment mContext) {
         this.mImageNames = mImageNames;
         this.mImages = mImages;
         this.mContext = mContext;
@@ -48,7 +49,7 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on: "+ mImageNames.get(position) );
-                Toast.makeText(mContext, mImageNames.get(position), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(mContext,mImageNames.get(position), Toast.LENGTH_SHORT).show();
             }
         });
     }

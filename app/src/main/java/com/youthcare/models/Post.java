@@ -6,17 +6,21 @@ import com.google.firebase.database.IgnoreExtraProperties;
 public class Post {
     private String title;
     private String content;
-    private String imageUrl;
+    private int postImage;
+    private int userImage;
     private Form form;
+    private String date;
 
     public Post() {
     }
 
-    public Post(String title, String content, String imageUrl, Form form) {
+    public Post(String title, String content, int userImage, Form form, String date) {
         this.title = title;
         this.content = content;
-        this.imageUrl = imageUrl;
+        this.userImage = userImage;
         this.form = form;
+        this.date = date;
+        this.postImage = userImage;
     }
 
     public String getTitle() {
@@ -35,12 +39,12 @@ public class Post {
         this.content = content;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public int getUserImage() {
+        return userImage;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setUserImage(int userImage) {
+        this.userImage = userImage;
     }
 
     public Form getForm() {
@@ -49,5 +53,21 @@ public class Post {
 
     public void setForm(Form form) {
         this.form = form;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setPostImage(int postImage) {
+        this.postImage = postImage;
+    }
+
+    public int getPostImage() {
+        return postImage;
     }
 }
