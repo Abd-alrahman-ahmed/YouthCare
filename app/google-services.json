@@ -1,42 +1,42 @@
 {
   "project_info": {
-    "project_number": "645119612668",
-    "firebase_url": "https://youth-care-f6deb.firebaseio.com",
-    "project_id": "youth-care-f6deb",
-    "storage_bucket": "youth-care-f6deb.appspot.com"
+    "project_number": "300495166014",
+    "firebase_url": "https://youth-care-f5a27.firebaseio.com",
+    "project_id": "youth-care-f5a27",
+    "storage_bucket": "youth-care-f5a27.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:645119612668:android:454fe15b80fc4b27942979",
+        "mobilesdk_app_id": "1:300495166014:android:26b3cecb68969fd8cb4f6f",
         "android_client_info": {
           "package_name": "com.youthcare"
         }
       },
       "oauth_client": [
         {
-          "client_id": "645119612668-gls1s2as4mh9lfs8i05adevboku83n3v.apps.googleusercontent.com",
+          "client_id": "300495166014-9rgelksvsa22omahb137pfmggjg89mn0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.youthcare",
-            "certificate_hash": "1bd1f62f116f45354d6c229aace102136565d7ea"
+            "certificate_hash": "5277f3d9a111389d4d293655f783e2adea7dfdba"
           }
         },
         {
-          "client_id": "645119612668-10hv4g8ff8j42cfr7fhi5otm8n36ttim.apps.googleusercontent.com",
+          "client_id": "300495166014-hlt25voee2ef62pja3r0fa9sou3l94em.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDsqPx2bB0uVITiGf7yIjpPFpNy-bw6TFo"
+          "current_key": "AIzaSyDc_ZHy9ydo6K4y5PXKvS2vDrFGqRARu3M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "645119612668-10hv4g8ff8j42cfr7fhi5otm8n36ttim.apps.googleusercontent.com",
+              "client_id": "300495166014-hlt25voee2ef62pja3r0fa9sou3l94em.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

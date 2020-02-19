@@ -22,6 +22,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.youthcare.Adapters.ActivitiesAdapter;
 import com.youthcare.Adapters.FragmentPageAdapter;
 import com.youthcare.Adapters.NewsAdapter;
@@ -65,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Initialize FireBase Auth
             mAuth = FirebaseAuth.getInstance();
+
         }catch (Exception e){
             System.out.println("hello " + e);
         }

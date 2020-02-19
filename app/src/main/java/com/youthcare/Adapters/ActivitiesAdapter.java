@@ -70,11 +70,11 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
                     if("Follow".equals(followBtn.getText())){
                         followBtn.setText("Following");
                         Toast.makeText(parent.getContext(), "Followed!", Toast.LENGTH_SHORT).show();
+
                     }else{
                         followBtn.setText("Follow");
                         Toast.makeText(parent.getContext(), "UnFollowed!", Toast.LENGTH_SHORT).show();
                     }
-
                 }
             });
 
