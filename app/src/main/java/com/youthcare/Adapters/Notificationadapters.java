@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,11 +15,11 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class notificationadapters  extends RecyclerView.Adapter<notificationadapters.NewsViewHolder> {
+public class Notificationadapters extends RecyclerView.Adapter<Notificationadapters.NewsViewHolder> {
     Context mcontext;
     List<itemnotification> mData;
 
-    public notificationadapters(Context mcontext, List<itemnotification> mData) {
+    public Notificationadapters(Context mcontext, List<itemnotification> mData) {
         this.mcontext = mcontext;
         this.mData = mData;
     }

@@ -52,14 +52,12 @@ public class MainActivity extends AppCompatActivity {
             // initialize Tab menus
             toolbar = (Toolbar) findViewById(R.id.main_tool_bar);
             setSupportActionBar(toolbar);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
             viewPager = (ViewPager) findViewById(R.id.app_pager);
             FragmentPageAdapter pageAdapter = new FragmentPageAdapter(getSupportFragmentManager());
             pageAdapter.addFragment(new NewsFragment(), "News");
             pageAdapter.addFragment(new NotificationFragment(), "Notifications");
             pageAdapter.addFragment(new ActivitiesFragment(), "Activities");
-            pageAdapter.addFragment(new NotificationFragment(), "About Us");
             viewPager.setAdapter(pageAdapter);
 
             tabLayout = (TabLayout) findViewById(R.id.tabs);

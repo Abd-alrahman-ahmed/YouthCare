@@ -7,15 +7,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.youthcare.Activities.NewsItem;
 import com.youthcare.Activities.itemnotification;
 import com.youthcare.Adapters.NewsAdapter;
-import com.youthcare.Adapters.notificationadapters;
+import com.youthcare.Adapters.Notificationadapters;
 import com.youthcare.R;
 
 import java.util.ArrayList;
@@ -36,7 +34,7 @@ public class NotificationFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_notifications, container, false);
         NewsRecyclerview= view.findViewById(R.id.notification);
-        notificationadapters r=new notificationadapters(getContext(),mData);
+        Notificationadapters r=new Notificationadapters(getContext(),mData);
         NewsRecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
         NewsRecyclerview.setAdapter(r);
         return view;

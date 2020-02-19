@@ -8,17 +8,27 @@ import java.util.List;
 public class department {
     private String name;
     private String about;
+    private int image;
     private User headUser;
     private List<Post> posts;
 
     public department() {
     }
 
-    public department(String name, String about, User headUser, List<Post> departmentPosts) {
+    public department(String name, String about, int image, User headUser, List<Post> departmentPosts) {
         this.name = name;
         this.about = about;
+        this.image = image;
         this.headUser = headUser;
         this.posts = departmentPosts;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public int getImage() {
+        return image;
     }
 
     public String getName() {
