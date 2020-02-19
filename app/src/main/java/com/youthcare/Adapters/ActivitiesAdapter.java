@@ -1,11 +1,15 @@
 package com.youthcare.Adapters;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.youthcare.Fragments.ActivitiesFragment;
 import com.youthcare.R;
@@ -23,6 +27,7 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
     private static final String TAG = "ActivitiesAdapter";
     private List<department> departments = new ArrayList<>();
     private ActivitiesFragment mContext;
+    private ViewGroup parent;
 
     public ActivitiesAdapter(List<department> departments, ActivitiesFragment mContext) {
         this.departments = departments;
@@ -33,8 +38,8 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_activities,parent,false);
+        this.parent = parent;
         ViewHolder holder=new ViewHolder(view);
-        
         return holder;
     }
 
@@ -54,9 +59,25 @@ public class ActivitiesAdapter extends RecyclerView.Adapter<ActivitiesAdapter.Vi
         CircleImageView Image;
         TextView ImageName;
         ConstraintLayout parentLayout;
+        Button followBtn;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            followBtn = itemView.findViewById(R.id.follow_btn);
+            followBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if("Follow".equals(followBtn.getText())){
+                        followBtn.setText("Following");
+                        Toast.makeText(parent.getContext(), "Followed!", Toast.LENGTH_SHORT).show();
+                    }else{
+                        followBtn.setText("Follow");
+                        Toast.makeText(parent.getContext(), "UnFollowed!", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            });
+
             Image=itemView.findViewById(R.id.image);
             ImageName=itemView.findViewById(R.id.image_name);
             parentLayout=itemView.findViewById(R.id.parent_layout);

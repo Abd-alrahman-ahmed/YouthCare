@@ -1,17 +1,21 @@
 package com.youthcare.Adapters;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
+import com.youthcare.Activities.MainActivity;
 import com.youthcare.R;
 import com.youthcare.models.Post;
 
@@ -54,6 +58,20 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new AlertDialog.Builder(parent.getContext())
+                        .setTitle("Reservation Confirmation")
+                        .setMessage("Do you really want to reserve this event ?")
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int whichButton) {
+                                Toast.makeText(parent.getContext(), "Event Reserved", Toast.LENGTH_SHORT).show();
+                            }})
+                        .setNegativeButton(android.R.string.no, null).show();
+                }
+            });
             container = (RelativeLayout) itemView.findViewById(R.id.container);
             post_title = (TextView) itemView.findViewById(R.id.post_title);
             post_description = (TextView) itemView.findViewById(R.id.post_description);
